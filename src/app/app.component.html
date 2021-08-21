@@ -1,0 +1,58 @@
+ 
+
+<nav ngClass="parent menu" >
+    <ul>
+        <li>
+           <a [routerLink]="[ 'formvalidator']" routerLinkActive="active">formvalidator</a>
+        </li>
+        <li>
+            <a [routerLink]="[ 'templateform']" routerLinkActive="active">templateform</a>
+         </li>
+    </ul>
+</nav>
+<div>
+    <router-outlet></router-outlet>
+    
+</div>
+<!-- <app-templateform>  </app-templateform> -->
+
+<!--<h1>This is validator Login Form</h1>
+<div class="container">
+    
+<form [formGroup]="loginform" (ngSubmit)="submit()">
+
+    <div class="form-group">
+        <label for="username">Username</label>
+         <br>
+<input class="px-5 py-2" type="text" formControlName="username">
+</div>
+<div class="form-group">
+    <label for="username">Password</label>
+         <br>
+<input class="px-5 py-2" type="password"  formControlName="password">
+</div>
+<div class="form-group">
+    <label for="Email">Email</label><br>
+<input class="px-5 py-2" type="text"  formControlName="Email"> 
+<span class="error" *ngif="email.invalid && email.touched" > email is required </span>
+
+</div>
+<div class="form-group">
+    <label for="Adress">Adress</label> <br>
+    <input class="px-5 py-2" type="text" name="Adress" formControlName="Adress">
+</div>
+<div class="form-group">
+    <label for="city">City</label> <br>
+    <input class="px-5 py-2" type="text" name="city" formControlName="city"> 
+</div> <br> <br>
+<div>
+    <button class="btn btn-lg btn-primary" type="submit" [disabled]="!loginform.valid">OnSubmit</button>
+  </div>
+</form>
+
+
+
+</div>
+
+
+         -->

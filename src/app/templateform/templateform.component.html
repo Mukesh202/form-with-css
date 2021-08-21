@@ -1,0 +1,19 @@
+<p>templateform works!</p>
+<h5> Template form </h5>
+
+<form #contactForm="ngForm">
+<label for="username">Username</label> <br>
+<input type="text" name="username" id="username" ngModel> <br> 
+<label for="password">Password</label> <br> <br>
+<input type="password" name="password" id="username" ngModel> <br> <br>
+<button type="submit" class="btn btn-primary" (click)="onsubmit(contactForm.value)"> Submit </button>
+</form>
+<h5>Reactive form</h5>
+<form [formGroup]="simpleform">
+    <label for="username">username</label> <br> <br>
+    <input type="text" name="username" id="username" formControlName="username" > <br> <br>
+    <label for="password">password</label> <br> <br>
+    <input type="password" name="password" id="password" formControlName="password"> <br> <br>
+
+    <button type="submit" class="btn btn-info" (click)="collectdata(simpleform.value)" [disabled]="!simpleform.valid" > submit</button> <br>
+</form>
